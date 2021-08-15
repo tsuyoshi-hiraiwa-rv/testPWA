@@ -2,9 +2,9 @@
   "name": "testInstaller",
   "short_name": "Installer",
   "icons": [{
-        "src": "Me.png",
+        "src": "Me.jpg",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/jpg"
       }],
   "start_url": "index.html",
   "display": "standalone",
