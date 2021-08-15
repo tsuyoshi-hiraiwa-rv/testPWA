@@ -1,2 +1,0 @@
-# testPWA
-PWAのテスト動作
