@@ -61,14 +61,11 @@ function registerInstallAppEvent(elem){
     elem.style.display = "block"; //要素を表示する
     return false;
   });
-  //インストールダイアログの表示処理
+  //インストール
   function installApp() {
     console.log("インストールボタンクリック");
-    installBtn.promptEvent.prompt(); //ダイアログ表示
-    installBtn.promptEvent.userChoice.then(function(choice){
-      installBtn.style.display = "none";
-      installBtn.promptEvent = null; //一度しか使えないため後始末
-    });
+    installBtn.style.display = "none";
+    installBtn.promptEvent = null; //一度しか使えないため後始末
   }//end installApp
   //ダイアログ表示を行うイベントを追加
   elem.addEventListener("click", installApp);
