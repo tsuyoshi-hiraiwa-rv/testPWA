@@ -10,6 +10,8 @@ registerInstallAppEvent(document.getElementById("InstallBtn"));
 //バナー表示をキャンセルし、代わりに表示するDOM要素を登録する関数
 //引数１：イベントを登録するHTMLElement
 function registerInstallAppEvent(elem){
+  console.log("インストールボタンのタップ");
+
   //インストールバナー表示条件満足時のイベントを乗っ取る
   window.addEventListener('beforeinstallprompt', function(event){
     console.log("beforeinstallprompt: ", event);
