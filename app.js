@@ -48,6 +48,7 @@ startBtn.addEventListener('click', () => {
 //*****************************************************************************************
 //バナーの代わりに表示するボタンを登録する
 registerInstallAppEvent(document.getElementById("InstallBtn"));
+let installBtn = document.getElementById("InstallBtn");
 
 //バナー表示をキャンセルし、代わりに表示するDOM要素を登録する関数
 //引数１：イベントを登録するHTMLElement
@@ -63,14 +64,11 @@ function registerInstallAppEvent(elem){
   //インストールダイアログの表示処理
   function installApp() {
     console.log("インストールボタンクリック");
-    console.log(elem.promptEvent);
-    if(elem.promptEvent){
-      elem.promptEvent.prompt(); //ダイアログ表示
-      elem.promptEvent.userChoice.then(function(choice){
-        elem.style.display = "none";
-        elem.promptEvent = null; //一度しか使えないため後始末
-      });//end then
-    }
+    installBtn.promptEvent.prompt(); //ダイアログ表示
+    installBtn.promptEvent.userChoice.then(function(choice){
+      installBtn.style.display = "none";
+      installBtn.promptEvent = null; //一度しか使えないため後始末
+    });
   }//end installApp
   //ダイアログ表示を行うイベントを追加
   elem.addEventListener("click", installApp);
