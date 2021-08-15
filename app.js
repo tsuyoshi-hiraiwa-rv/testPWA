@@ -63,6 +63,7 @@ function registerInstallAppEvent(elem){
   //インストールダイアログの表示処理
   function installApp() {
     console.log("インストールボタンクリック");
+    console.log(elem.promptEvent);
     if(elem.promptEvent){
       elem.promptEvent.prompt(); //ダイアログ表示
       elem.promptEvent.userChoice.then(function(choice){
