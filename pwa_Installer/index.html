@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>インストーラテスト</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="manifest" href="manifest.json">
+        <script src="js/main.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('serviceWorker.js')
+                .then((reg) => { console.log('SW registered.', reg); });
+            }
+          </script>
+    </head>
+
+    <body>
+        <button id="InstallBtn" style="display:none">
+            アプリをインストールする
+        </button>
+        <script src="js/app.js"></script>
+    </body>
+</html>
